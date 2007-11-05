@@ -1,8 +1,10 @@
 %define	name	SDL_gfx
 %define	version	2.0.16
-%define	release %mkrel 1
+%define	release %mkrel 2
 %define	major 0
 %define	libname	%mklibname %{name} %{major}
+%define develname %mklibname -d %name
+%define staticname %mklibname -d -s %name
 
 Summary:	SDL graphics drawing primitives and other support functions
 Name:		%{name}
@@ -46,23 +48,25 @@ The current components of the SDL_gfx library are:
 The library is backwards compatible to the above mentioned code. It's
 is written in plain C and can be used in C++ code.
 
-%package -n	%{libname}-devel
+%package -n	%develname
 Summary:	Header files and more to develop SDL_gfx applications
 Group:		Development/C
 Requires:	%{libname} = %{version}-%{release}
 Requires:	SDL-devel
 Provides:	%{name}-devel = %{version}-%{release}
 Provides:	lib%{name}-devel = %version-%release
+Obsoletes: %mklibname -d %name 0
 
-%description -n	%{libname}-devel
+%description -n	%develname
 Header files and more to develop SDL_gfx applications.
 
-%package -n	%{libname}-static-devel
+%package -n	%staticname
 Summary:	Static SDL_gfx libraries
 Group:		Development/C
-Requires:	%{libname}-devel = %{version}-%{release}
+Requires:	%develname = %{version}-%{release}
+Obsoletes: %mklibname -d -s %name 0
 
-%description -n	%{libname}-static-devel
+%description -n	%staticname
 Static SDL_gfx libraries.
 
 %prep
@@ -92,14 +96,14 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %{_libdir}/lib*.so.%{major}*
 
-%files -n %{libname}-devel
+%files -n %develname
 %defattr(-,root,root)
 %doc README ChangeLog AUTHORS Docs
 %{_libdir}/lib*.so
 %{_libdir}/lib*.la
 %{_includedir}/*
 
-%files -n %{libname}-static-devel
+%files -n %staticname
 %defattr(-,root,root)
 %{_libdir}/lib*.a
 
