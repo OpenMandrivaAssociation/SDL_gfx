@@ -18,7 +18,6 @@ BuildRequires:	SDL-devel >= 1.2.0
 BuildRequires:	libpng-devel >= 1.0.8
 BuildRequires:	libtiff-devel
 BuildRequires:	automake1.8
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 The SDL_gfx library evolved out of the SDL_gfxPrimitives code.
