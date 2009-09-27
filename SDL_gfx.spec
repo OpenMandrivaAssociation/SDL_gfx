@@ -1,16 +1,16 @@
-%define	major 0
+%define	major 13
 %define	libname	%mklibname %{name} %{major}
 %define develname %mklibname %{name} -d
 %define staticname %mklibname %{name} -d -s
 
 Summary:	SDL graphics drawing primitives and other support functions
 Name:		SDL_gfx
-Version:	2.0.18
-Release:	%mkrel 2
+Version:	2.0.20
+Release:	%mkrel 1
 License:	LGPLv2+
 Group:		System/Libraries
 URL:		http://www.ferzkopp.net/~aschiffler/Software/SDL_gfx-2.0/index.html
-Source0:	http://www.ferzkopp.net/~aschiffler/Software/SDL_gfx-2.0/%{name}-%{version}.tar.gz
+Source0:	http://www.ferzkopp.net/Software/SDL_gfx-2.0/%{name}-%{version}.tar.gz
 BuildRequires:	SDL-devel >= 1.2.0
 BuildRequires:	libpng-devel >= 1.0.8
 BuildRequires:	libtiff-devel
