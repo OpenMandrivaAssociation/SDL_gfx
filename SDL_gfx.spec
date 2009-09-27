@@ -69,12 +69,7 @@ Static SDL_gfx libraries.
 %setup -q
 
 %build
-rm -f missing acinclude.m4 configure
-libtoolize --force
-aclocal
-automake -a
-autoconf
-
+autoreconf -fi
 %configure2_5x --disable-mmx
 %make
 
@@ -101,6 +96,7 @@ rm -rf %{buildroot}
 %doc README ChangeLog AUTHORS Docs
 %{_libdir}/lib*.so
 %{_libdir}/lib*.la
+%{_libdir}/pkgconfig/*.pc
 %{_includedir}/*
 
 %files -n %{staticname}
