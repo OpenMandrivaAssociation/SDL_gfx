@@ -6,7 +6,7 @@
 Summary:	SDL graphics drawing primitives and other support functions
 Name:		SDL_gfx
 Version:	2.0.23
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	LGPLv2+
 Group:		System/Libraries
 URL:		http://www.ferzkopp.net/~aschiffler/Software/SDL_gfx-2.0/index.html
@@ -75,16 +75,11 @@ Static SDL_gfx libraries.
 %install
 rm -rf %{buildroot}
 %makeinstall_std
+rm -f %buildroot%_libdir/*.la
 
 %clean
 rm -rf %{buildroot}
 
-%if %mdkversion < 200900
-%post -n %{libname} -p /sbin/ldconfig
-%endif
-%if %mdkversion < 200900
-%postun -n %{libname} -p /sbin/ldconfig
-%endif
 
 %files -n %{libname}
 %defattr(-,root,root)
@@ -94,7 +89,6 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc README ChangeLog AUTHORS Docs
 %{_libdir}/lib*.so
-%{_libdir}/lib*.la
 %{_libdir}/pkgconfig/*.pc
 %{_includedir}/*
 
