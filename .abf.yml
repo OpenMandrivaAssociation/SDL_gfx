@@ -1,2 +1,4 @@
+removed_sources:
+  SDL_gfx-2.0.23.tar.gz: aae60e7fed539f3f8a0a0bd6da3bbcf625642596
 sources:
-  "SDL_gfx-2.0.23.tar.gz": aae60e7fed539f3f8a0a0bd6da3bbcf625642596
+  SDL_gfx-2.0.25.tar.gz: 20a89d0b71b7b790b830c70f17ed2c44100bc0f4
