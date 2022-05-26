@@ -1,4 +1,4 @@
-%define major 15
+%define major 16
 %define libname %mklibname %{name} %{major}
 %define devname %mklibname %{name} -d
 
