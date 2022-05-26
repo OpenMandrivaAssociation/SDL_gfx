@@ -55,6 +55,7 @@ Header files and more to develop SDL_gfx applications.
 %setup -q
 
 %build
+autoreconf -fvi
 %configure \
 	--disable-static \
 	--disable-mmx
