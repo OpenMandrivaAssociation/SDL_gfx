@@ -4,8 +4,8 @@
 
 Summary:	SDL graphics drawing primitives and other support functions
 Name:		SDL_gfx
-Version:	2.0.26
-Release:	2
+Version:	2.0.27
+Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
 Url:		http://www.ferzkopp.net/~aschiffler/Software/SDL_gfx-2.0/index.html
