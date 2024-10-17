@@ -8,7 +8,7 @@ Version:	2.0.27
 Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
-Url:		http://www.ferzkopp.net/~aschiffler/Software/SDL_gfx-2.0/index.html
+Url:		https://www.ferzkopp.net/~aschiffler/Software/SDL_gfx-2.0/index.html
 Source0:	http://www.ferzkopp.net/Software/SDL_gfx-2.0/%{name}-%{version}.tar.gz
 BuildRequires:	tiff-devel
 BuildRequires:	pkgconfig(libpng)
