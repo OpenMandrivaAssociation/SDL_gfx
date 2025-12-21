@@ -10,6 +10,11 @@ License:	LGPLv2+
 Group:		System/Libraries
 Url:		https://www.ferzkopp.net/~aschiffler/Software/SDL_gfx-2.0/index.html
 Source0:	http://www.ferzkopp.net/Software/SDL_gfx-2.0/%{name}-%{version}.tar.gz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	tiff-devel
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:	pkgconfig(sdl)
